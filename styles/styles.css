@@ -9,6 +9,7 @@
 
 .the-title {
   text-align: center;
+  font-size: 350%;
 }
 
 #info {
@@ -17,4 +18,13 @@
 
 .the-info {
   text-align: center;
+}
+
+.header {
+  background-color: #ff8080;
+}
+
+.foots {
+  text-align: center;
+  font-size: 125%;
 }
