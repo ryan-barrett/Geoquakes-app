@@ -58,12 +58,4 @@ function createMap() {
     },
     zoom: 3
   });
-  // var homeMarker = new google.maps.Marker({
-  //   position: {
-  //     lat: 37.78,
-  //     lng: -122.44
-  //   },
-  //   map: map,
-  //   title: "San Francisco (no earthquake)"
-  // });
 }

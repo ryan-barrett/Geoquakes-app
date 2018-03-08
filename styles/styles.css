@@ -21,10 +21,29 @@
 }
 
 .header {
-  background-color: #ff9999;
+  background-color: white;
 }
 
 .foots {
   text-align: center;
   font-size: 125%;
+}
+
+.main-content{
+  margin-top: 9%;
+}
+
+.top-bar{
+  width: 75%;
+  display: inline-block;
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 5px;
 }
