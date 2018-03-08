@@ -9,7 +9,7 @@
 
 .the-title {
   text-align: center;
-  font-size: 350%;
+  font-size: 300%;
 }
 
 #info {
@@ -33,11 +33,6 @@
   margin-top: 9%;
 }
 
-.top-bar{
-  width: 75%;
-  display: inline-block;
-  text-align: center;
-}
 
 h1,
 h2,
