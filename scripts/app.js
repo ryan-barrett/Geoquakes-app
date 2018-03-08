@@ -32,18 +32,22 @@ function listQuakeData(dataResponse) {
         var hoursAgo = Math.round(
           (Date.now() - quake.properties.time) / 3600000
         );
-        $(".earthquakeData").append(
-          `<li>${hoursAgo} hours ago | ${title}</li>`
-        );
 
-        //Create Marker
-        var lat = quake.geometry.coordinates[1];
-        var lng = quake.geometry.coordinates[0];
-        var marker = new google.maps.Marker({
-          position: new google.maps.LatLng(lat, lng),
-          map: map,
-          title: title
-        });
+        var temp = title.split(",");
+        if (temp[1] === " CA") {
+          $(".earthquakeData").append(
+            `<li>${hoursAgo} hours ago | ${title}</li>`
+          );
+
+          //Create Marker
+          var lat = quake.geometry.coordinates[1];
+          var lng = quake.geometry.coordinates[0];
+          var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(lat, lng),
+            map: map,
+            title: title
+          });
+        }
       });
     }
   });
