@@ -1,6 +1,3 @@
-// define globals
-
-//define endpoint
 var dailyQuakes =
   "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson";
 
@@ -20,7 +17,6 @@ function listQuakeData(dataResponse) {
     url: dailyQuakes,
     dataType: "json",
     success: function(dataResponse) {
-      // console.log(dataResponse);
 
       //defining unnamed Object as variable
       var earthquakes = dataResponse;
