@@ -1,4 +1,4 @@
-<h1>Geoquakes</h1>
+<h1>Quakewatch</h1>
 <p>Created to instantly track earthquakes in California as soon as they take place.</p>
 <h2>Screenshot:</h2>
 <img src="https://i.imgur.com/kaJxwNc.png" height="60%" width="60%">
