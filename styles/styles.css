@@ -42,3 +42,9 @@ h5,
 h6 {
   letter-spacing: 5px;
 }
+
+.no-data{
+  padding-top: 30px;
+  margin-right: 5%;
+  font-size: 130%;
+}
