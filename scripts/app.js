@@ -17,20 +17,30 @@ function listQuakeData(dataResponse) {
     url: dailyQuakes,
     dataType: "json",
     success: function(dataResponse) {
-
       //defining unnamed Object as variable
       var earthquakes = dataResponse;
+      var californiaQuake = [];
 
-      //for each location, create a list item and marker
-      earthquakes.features.forEach(function listAndMarker(quake) {
-        //List item of earthquake info
-        var title = quake.properties.title;
-        var hoursAgo = Math.round(
-          (Date.now() - quake.properties.time) / 3600000
-        );
-
-        var temp = title.split(",");
+      earthquakes.features.forEach(function(quake) {
+        var temp = quake.properties.title.split(",");
         if (temp[1] === " CA") {
+          californiaQuake.push(quake);
+        }
+      });
+
+      if (californiaQuake.length === 0) {
+        $(".earthquakeData").append("None Yet Today!");
+        $(".earthquakeData").addClass("no-data");
+      } else {
+        //for each location, create a list item and marker
+        californiaQuake.forEach(function listAndMarker(quake) {
+          //List item of earthquake info
+          var title = quake.properties.title;
+          var hoursAgo = Math.round(
+            (Date.now() - quake.properties.time) / 3600000
+          );
+
+          var temp = title.split(",");
           $(".earthquakeData").append(
             `<li>${hoursAgo} hours ago | ${title}</li>`
           );
@@ -43,8 +53,8 @@ function listQuakeData(dataResponse) {
             map: map,
             title: title
           });
-        }
-      });
+        });
+      }
     }
   });
 }
