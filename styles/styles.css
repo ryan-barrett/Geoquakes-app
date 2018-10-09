@@ -29,10 +29,9 @@
   font-size: 125%;
 }
 
-.main-content{
+.main-content {
   margin-top: 9%;
 }
-
 
 h1,
 h2,
@@ -43,7 +42,7 @@ h6 {
   letter-spacing: 5px;
 }
 
-.no-data{
+.no-data {
   padding-top: 30px;
   margin-right: 5%;
   font-size: 130%;
